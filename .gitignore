@@ -1,0 +1,37 @@
+# .gitignore для Python + PyCharm
+
+# Виртуальные окружения
+.venv/
+env/
+venv/
+ENV/
+
+# Папки с кешем PyCharm
+.idea/
+
+# Папки с кешем Python
+__pycache__/
+*.py[cod]
+
+# Папки для временных файлов и сборки
+*.log
+*.sqlite3
+*.pyo
+*.pyd
+*.db
+*.bak
+
+# Конфигурационные файлы для IDE
+*.iml
+
+# Файлы для тестирования, временные файлы
+.coverage
+nosetests.xml
+pytest.xml
+*.cover
+*.log
+*.pot
+
+# Прочие файлы, которые могут появиться в процессе работы
+*.swp
+*.swo
