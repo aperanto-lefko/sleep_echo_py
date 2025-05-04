@@ -1,1 +1,8 @@
-# Зависимости
+# Зависимости, аналог maven
+PySide6==6.9.0 #Библиотека для создания GUI (графического интерфейса) на Python
+psycopg2-binary==2.9.10 #Библиотека для работы с PostgreSQL из Python
+python-dotenv==1.0.0  # Библиотека для загрузки переменных окружения из файла .env (аналог properties)
+sqlalchemy==1.4.41 # ORM (Object-Relational Mapping) для работы с базами данных.
+alembic==1.15.2 # система миграций для SQLAlchemy (аналог Django Migrations).
+pydantic==1.10.13 #валидация данных и парсинг через аннотации типов
+sqlmodel==0.0.8
