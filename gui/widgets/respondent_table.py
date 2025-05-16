@@ -1,87 +1,58 @@
-from PySide6.QtWidgets import QVBoxLayout, QTableWidget, QHBoxLayout, QLineEdit, QPushButton, QTableWidgetItem, QWidget
+from PySide6.QtWidgets import QTableWidget, QMessageBox, QTableWidgetItem, QWidget, QHeaderView
+from PySide6.QtCore import Qt
 
 
 class RespondentTable(QWidget):
-    def __init__(self, respondent_service):
+    def __init__(self, table_widget, respondent_service):
         super().__init__()
+        self.table = table_widget
         self.respondent_service = respondent_service
+        self.initialize_table()
 
-        self.layout = QVBoxLayout(self)
-
-        # Таблица
-        self.table = QTableWidget()
-        self.layout.addWidget(self.table)
-
-        # Форма добавления
-        form_layout = QHBoxLayout()
-        self.first_name_input = QLineEdit()
-        self.first_name_input.setPlaceholderText("first_name")
-        self.last_name_input = QLineEdit()
-        self.last_name_input.setPlaceholderText("last_name")
-        self.email_input = QLineEdit()
-        self.email_input.setPlaceholderText("email")
-        self.gender_input = QLineEdit()
-        self.gender_input.setPlaceholderText("gender")
-        self.country_input = QLineEdit()
-        self.country_input.setPlaceholderText("country")
-        self.age_input = QLineEdit()
-        self.age_input.setPlaceholderText("age")
-        self.add_button = QPushButton("Add Respondent")
-        self.add_button.clicked.connect(self.add_respondent)
-
-        form_layout.addWidget(self.first_name_input)
-        form_layout.addWidget(self.last_name_input)
-        form_layout.addWidget(self.email_input)
-        form_layout.addWidget(self.gender_input)
-        form_layout.addWidget(self.country_input)
-        form_layout.addWidget(self.age_input)
-        form_layout.addWidget(self.add_button)
-
-        self.layout.addLayout(form_layout)
-
-        self.load_data()
-
-    def load_data(self):
-        respondents = self.respondent_service.get_respondents()
-        self.table.setRowCount(len(respondents))
+    def initialize_table(self):
         self.table.setColumnCount(7)
         self.table.setHorizontalHeaderLabels([
             "ID", "First Name", "Last Name", "Email", "Gender", "Country", "Age"
         ])
+        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.table.setSortingEnabled(True)  # Включает сортировку таблицы по клику на заголовки колонок
+        self.table.setSelectionBehavior(
+            QTableWidget.SelectRows)  # Устанавливает выделение целых строк вместо отдельных ячеек
 
-        for row, respondent in enumerate(respondents):
-            self.table.setItem(row, 0, QTableWidgetItem(str(respondent.id)))
-            self.table.setItem(row, 1, QTableWidgetItem(respondent.first_name))
-            self.table.setItem(row, 2, QTableWidgetItem(respondent.last_name))
-            self.table.setItem(row, 3, QTableWidgetItem(respondent.email))
-            self.table.setItem(row, 4, QTableWidgetItem(respondent.gender))
-            self.table.setItem(row, 5, QTableWidgetItem(respondent.country))
-            self.table.setItem(row, 6, QTableWidgetItem(str(respondent.age)))
+    def load_data(self):
+        try:
 
-    def add_respondent(self):
-        first_name = self.first_name_input.text()
-        last_name = self.last_name_input.text()
-        email = self.email_input.text()
-        gender = self.gender_input.text()
-        country = self.country_input.text()
-        age_text = self.age_input.text()
+            respondents = self.respondent_service.get_respondents()
+            self.table.setRowCount(len(respondents))
 
-        if first_name and last_name and email and age_text.isdigit():
-            age = int(age_text)
-            self.respondent_service.add_respondent(
-                first_name=first_name,
-                last_name=last_name,
-                email=email,
-                gender=gender,
-                country=country,
-                age=age
-            )
+            for row, respondent in enumerate(respondents):
+                # Колонка ID (с числовой сортировкой)
+                item_id = QTableWidgetItem()
+                item_id.setData(Qt.DisplayRole, int(respondent.id))
+                self.table.setItem(row, 0, item_id)
 
-            self.first_name_input.clear()
-            self.last_name_input.clear()
-            self.email_input.clear()
-            self.gender_input.clear()
-            self.country_input.clear()
-            self.age_input.clear()
+                self.table.setItem(row, 1, QTableWidgetItem(respondent.first_name))
+                self.table.setItem(row, 2, QTableWidgetItem(respondent.last_name))
+                self.table.setItem(row, 3, QTableWidgetItem(respondent.email))
+                self.table.setItem(row, 4, QTableWidgetItem(respondent.gender))
+                self.table.setItem(row, 5, QTableWidgetItem(respondent.country))
+                age = QTableWidgetItem()
+                age.setData(Qt.DisplayRole, int(respondent.age))
+                self.table.setItem(row, 6, age)
 
-            self.load_data()
+
+        except Exception as e:
+            QMessageBox.critical(self,
+                                 "Ошибка загрузки",
+                                 f"Не удалось загрузить данные: \n{str(e)}")
+
+    def add_respondent(self, data: dict):
+        self.respondent_service.add_respondent(
+            data["first_name"],
+            data["last_name"],
+            data["email"],
+            data["gender"],
+            data["country"],
+            data["age"]
+        )
+        self.load_data()

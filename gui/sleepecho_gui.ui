@@ -135,7 +135,7 @@
         <item row="2" column="0" colspan="2">
          <layout class="QGridLayout" name="gridLayout_5">
           <item row="0" column="0">
-           <widget class="QTableView" name="table_resp"/>
+           <widget class="QTableWidget" name="resp_tablewidget"/>
           </item>
          </layout>
         </item>
@@ -1029,6 +1029,25 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>all_respondents_btn</tabstop>
+  <tabstop>search_resp_btn</tabstop>
+  <tabstop>last_name_field_search</tabstop>
+  <tabstop>resp_tablewidget</tabstop>
+  <tabstop>name_resp</tabstop>
+  <tabstop>last_name_resp</tabstop>
+  <tabstop>email_resp</tabstop>
+  <tabstop>gender_box</tabstop>
+  <tabstop>age_resp</tabstop>
+  <tabstop>country_resp</tabstop>
+  <tabstop>add_resp_btn</tabstop>
+  <tabstop>id_resp_search</tabstop>
+  <tabstop>search_resp_by_id_btn</tabstop>
+  <tabstop>update_resp_btn</tabstop>
+  <tabstop>id_resp_delete</tabstop>
+  <tabstop>delete_resp_btn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

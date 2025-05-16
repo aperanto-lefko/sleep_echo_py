@@ -17,8 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QGridLayout, QHeaderView,
     QLabel, QLayout, QLineEdit, QMainWindow,
-    QPushButton, QSizePolicy, QTabWidget, QTableView,
-    QWidget)
+    QPushButton, QSizePolicy, QTabWidget, QTableWidget,
+    QTableWidgetItem, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -78,10 +78,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_5 = QGridLayout()
         self.gridLayout_5.setObjectName(u"gridLayout_5")
-        self.table_resp = QTableView(self.widget_2)
-        self.table_resp.setObjectName(u"table_resp")
+        self.resp_tablewidget = QTableWidget(self.widget_2)
+        self.resp_tablewidget.setObjectName(u"resp_tablewidget")
 
-        self.gridLayout_5.addWidget(self.table_resp, 0, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.resp_tablewidget, 0, 0, 1, 1)
 
 
         self.gridLayout_2.addLayout(self.gridLayout_5, 2, 0, 1, 2)
@@ -433,6 +433,22 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
+        QWidget.setTabOrder(self.tabWidget, self.all_respondents_btn)
+        QWidget.setTabOrder(self.all_respondents_btn, self.search_resp_btn)
+        QWidget.setTabOrder(self.search_resp_btn, self.last_name_field_search)
+        QWidget.setTabOrder(self.last_name_field_search, self.resp_tablewidget)
+        QWidget.setTabOrder(self.resp_tablewidget, self.name_resp)
+        QWidget.setTabOrder(self.name_resp, self.last_name_resp)
+        QWidget.setTabOrder(self.last_name_resp, self.email_resp)
+        QWidget.setTabOrder(self.email_resp, self.gender_box)
+        QWidget.setTabOrder(self.gender_box, self.age_resp)
+        QWidget.setTabOrder(self.age_resp, self.country_resp)
+        QWidget.setTabOrder(self.country_resp, self.add_resp_btn)
+        QWidget.setTabOrder(self.add_resp_btn, self.id_resp_search)
+        QWidget.setTabOrder(self.id_resp_search, self.search_resp_by_id_btn)
+        QWidget.setTabOrder(self.search_resp_by_id_btn, self.update_resp_btn)
+        QWidget.setTabOrder(self.update_resp_btn, self.id_resp_delete)
+        QWidget.setTabOrder(self.id_resp_delete, self.delete_resp_btn)
 
         self.retranslateUi(MainWindow)
 
