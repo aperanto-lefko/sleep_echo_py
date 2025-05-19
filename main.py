@@ -1,7 +1,7 @@
 import sys
 
 from PySide6.QtWidgets import QApplication
-from sqlmodel import SQLModel
+
 
 from config.database_config import get_session, engine
 from config.logging_config import setup_logging
