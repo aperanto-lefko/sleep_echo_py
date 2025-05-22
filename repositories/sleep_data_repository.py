@@ -84,6 +84,11 @@ class SleepDataRepository:
             mood_start == 0 and mood_end == 0,
             stress_start == 0 and stress_end == 0
         ])
+        if all_parameters_empty:
+            # Если все параметры пустые - возвращаем все данные с сортировкой по ID
+            query = select(SleepData).order_by(SleepData.id)
+            result = self.session.exec(query)
+            return result.all()
 
         query = select(SleepData)
 
@@ -179,7 +184,7 @@ class SleepDataRepository:
             elif stress_end > 0:
                 query = query.where(SleepData.stress_level <= stress_end)
 
-        # Сортировка и выполнение запроса
+            # Сортировка и выполнение запроса
         query = query.order_by(SleepData.id)
         result = self.session.exec(query)
         return result.all()
