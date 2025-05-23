@@ -24,3 +24,5 @@ class MainWindow(QMainWindow):
         # подключаем таб вкладки
         self.respondents_tab = RespondentsTab(self.ui, respondent_service)
         self.data_tab=SleepDataTab(self.ui,data_service)
+
+        self.ui.tabWidget.setCurrentIndex(0)

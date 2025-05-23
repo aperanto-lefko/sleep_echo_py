@@ -1,6 +1,5 @@
-from datetime import date
+from datetime import datetime
 from typing import List
-from sqlalchemy.orm import Session
 from sqlalchemy.exc import NoResultFound
 from contextlib import contextmanager
 from models.sleep_data import SleepData
@@ -38,17 +37,18 @@ class SleepDataService:
         Добавление данных о сне
         """
         # Проверяем существование респондента
-        self._r_service.get_respondent_by_id(person_id)
+        self._r_service.search_resp_by_id(person_id)
 
         new_sleep_data = SleepData(
             person_id=person_id,
+            sleep_date=datetime.now().date(),
             sleep_start_time=sleep_start_time,
             sleep_end_time=sleep_end_time,
             total_sleep_hours=total_sleep_hours,
             sleep_quality=sleep_quality,
             exercise_minutes=exercise_minutes,
             caffeine_intake_mg=caffeine_intake_mg,
-            screen_time=screen_time,
+            screen_time_before_bed=screen_time,
             work_hours=work_hours,
             productivity_score=productivity_score,
             mood_score=mood_score,
@@ -79,7 +79,7 @@ class SleepDataService:
 
             # Обновляем только переданные параметры
             if person_id is not None:
-                self._r_service.get_respondent_by_id(person_id)
+                self._r_service.search_resp_by_id(person_id)
                 old_data.person_id = person_id
             if sleep_start_time is not None:
                 old_data.sleep_start_time = sleep_start_time
@@ -94,7 +94,7 @@ class SleepDataService:
             if caffeine_intake_mg is not None:
                 old_data.caffeine_intake_mg = caffeine_intake_mg
             if screen_time is not None:
-                old_data.screen_time = screen_time
+                old_data.screen_time_before_bed = screen_time
             if work_hours is not None:
                 old_data.work_hours = work_hours
             if productivity_score is not None:

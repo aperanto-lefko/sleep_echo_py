@@ -24,6 +24,7 @@ class RespondentsTab(QWidget):
         ])
         self.ui.resp_tablewidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.ui.resp_tablewidget.setSelectionBehavior(QTableWidget.SelectRows)
+        
 
     def connect_signals(self):
         self.ui.all_respondents_btn.clicked.connect(self.load_all)

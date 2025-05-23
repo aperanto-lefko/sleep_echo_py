@@ -16,15 +16,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QHeaderView, QLabel, QLayout, QLineEdit,
-    QMainWindow, QPushButton, QSizePolicy, QTabWidget,
-    QTableWidget, QTableWidgetItem, QWidget)
+    QHBoxLayout, QHeaderView, QLabel, QLayout,
+    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+    QTabWidget, QTableWidget, QTableWidgetItem, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1183, 688)
+        MainWindow.resize(1251, 758)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"QWidget {\n"
@@ -603,442 +603,6 @@ class Ui_MainWindow(object):
 "}")
         self.gridLayout_8 = QGridLayout(self.Data_widget)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
-        self.gridLayout_17 = QGridLayout()
-        self.gridLayout_17.setObjectName(u"gridLayout_17")
-        self.productivity_start = QLineEdit(self.Data_widget)
-        self.productivity_start.setObjectName(u"productivity_start")
-        sizePolicy1.setHeightForWidth(self.productivity_start.sizePolicy().hasHeightForWidth())
-        self.productivity_start.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.productivity_start, 1, 1, 1, 1)
-
-        self.label_17 = QLabel(self.Data_widget)
-        self.label_17.setObjectName(u"label_17")
-        sizePolicy1.setHeightForWidth(self.label_17.sizePolicy().hasHeightForWidth())
-        self.label_17.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.label_17, 0, 0, 1, 1)
-
-        self.productivity_end = QLineEdit(self.Data_widget)
-        self.productivity_end.setObjectName(u"productivity_end")
-        sizePolicy11 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
-        sizePolicy11.setHorizontalStretch(0)
-        sizePolicy11.setVerticalStretch(0)
-        sizePolicy11.setHeightForWidth(self.productivity_end.sizePolicy().hasHeightForWidth())
-        self.productivity_end.setSizePolicy(sizePolicy11)
-
-        self.gridLayout_17.addWidget(self.productivity_end, 1, 2, 1, 1)
-
-        self.work_time_start = QLineEdit(self.Data_widget)
-        self.work_time_start.setObjectName(u"work_time_start")
-        sizePolicy1.setHeightForWidth(self.work_time_start.sizePolicy().hasHeightForWidth())
-        self.work_time_start.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.work_time_start, 0, 1, 1, 1)
-
-        self.mood_start = QLineEdit(self.Data_widget)
-        self.mood_start.setObjectName(u"mood_start")
-        sizePolicy1.setHeightForWidth(self.mood_start.sizePolicy().hasHeightForWidth())
-        self.mood_start.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.mood_start, 2, 1, 1, 1)
-
-        self.mood_end = QLineEdit(self.Data_widget)
-        self.mood_end.setObjectName(u"mood_end")
-        sizePolicy1.setHeightForWidth(self.mood_end.sizePolicy().hasHeightForWidth())
-        self.mood_end.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.mood_end, 2, 2, 1, 1)
-
-        self.work_time_end = QLineEdit(self.Data_widget)
-        self.work_time_end.setObjectName(u"work_time_end")
-        sizePolicy1.setHeightForWidth(self.work_time_end.sizePolicy().hasHeightForWidth())
-        self.work_time_end.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.work_time_end, 0, 2, 1, 1)
-
-        self.label_18 = QLabel(self.Data_widget)
-        self.label_18.setObjectName(u"label_18")
-        sizePolicy1.setHeightForWidth(self.label_18.sizePolicy().hasHeightForWidth())
-        self.label_18.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.label_18, 1, 0, 1, 1)
-
-        self.label_19 = QLabel(self.Data_widget)
-        self.label_19.setObjectName(u"label_19")
-        sizePolicy1.setHeightForWidth(self.label_19.sizePolicy().hasHeightForWidth())
-        self.label_19.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.label_19, 2, 0, 1, 1)
-
-        self.label_20 = QLabel(self.Data_widget)
-        self.label_20.setObjectName(u"label_20")
-        sizePolicy1.setHeightForWidth(self.label_20.sizePolicy().hasHeightForWidth())
-        self.label_20.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.label_20, 3, 0, 1, 1)
-
-        self.stress_start = QLineEdit(self.Data_widget)
-        self.stress_start.setObjectName(u"stress_start")
-        sizePolicy1.setHeightForWidth(self.stress_start.sizePolicy().hasHeightForWidth())
-        self.stress_start.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.stress_start, 3, 1, 1, 1)
-
-        self.stress_end = QLineEdit(self.Data_widget)
-        self.stress_end.setObjectName(u"stress_end")
-        sizePolicy1.setHeightForWidth(self.stress_end.sizePolicy().hasHeightForWidth())
-        self.stress_end.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_17.addWidget(self.stress_end, 3, 2, 1, 1)
-
-
-        self.gridLayout_8.addLayout(self.gridLayout_17, 1, 2, 1, 1)
-
-        self.gridLayout_13 = QGridLayout()
-        self.gridLayout_13.setObjectName(u"gridLayout_13")
-        self.all_data_btn = QPushButton(self.Data_widget)
-        self.all_data_btn.setObjectName(u"all_data_btn")
-
-        self.gridLayout_13.addWidget(self.all_data_btn, 0, 1, 1, 1)
-
-        self.frame = QFrame(self.Data_widget)
-        self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Shadow.Raised)
-
-        self.gridLayout_13.addWidget(self.frame, 0, 0, 1, 1)
-
-        self.widget_4 = QWidget(self.Data_widget)
-        self.widget_4.setObjectName(u"widget_4")
-
-        self.gridLayout_13.addWidget(self.widget_4, 0, 2, 1, 1)
-
-
-        self.gridLayout_8.addLayout(self.gridLayout_13, 2, 0, 1, 3)
-
-        self.gridLayout_18 = QGridLayout()
-        self.gridLayout_18.setObjectName(u"gridLayout_18")
-        self.delete_data_id = QLineEdit(self.Data_widget)
-        self.delete_data_id.setObjectName(u"delete_data_id")
-        sizePolicy1.setHeightForWidth(self.delete_data_id.sizePolicy().hasHeightForWidth())
-        self.delete_data_id.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_18.addWidget(self.delete_data_id, 5, 1, 1, 1)
-
-        self.delete_data_btn = QPushButton(self.Data_widget)
-        self.delete_data_btn.setObjectName(u"delete_data_btn")
-        sizePolicy1.setHeightForWidth(self.delete_data_btn.sizePolicy().hasHeightForWidth())
-        self.delete_data_btn.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_18.addWidget(self.delete_data_btn, 6, 1, 1, 1)
-
-        self.update_data_id = QLineEdit(self.Data_widget)
-        self.update_data_id.setObjectName(u"update_data_id")
-        sizePolicy1.setHeightForWidth(self.update_data_id.sizePolicy().hasHeightForWidth())
-        self.update_data_id.setSizePolicy(sizePolicy1)
-        self.update_data_id.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_18.addWidget(self.update_data_id, 1, 1, 1, 1)
-
-        self.label_35 = QLabel(self.Data_widget)
-        self.label_35.setObjectName(u"label_35")
-        sizePolicy1.setHeightForWidth(self.label_35.sizePolicy().hasHeightForWidth())
-        self.label_35.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_18.addWidget(self.label_35, 1, 0, 1, 1)
-
-        self.label_34 = QLabel(self.Data_widget)
-        self.label_34.setObjectName(u"label_34")
-        sizePolicy1.setHeightForWidth(self.label_34.sizePolicy().hasHeightForWidth())
-        self.label_34.setSizePolicy(sizePolicy1)
-        self.label_34.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.label_34.setLocale(QLocale(QLocale.Russian, QLocale.Russia))
-        self.label_34.setLineWidth(-5)
-        self.label_34.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_18.addWidget(self.label_34, 0, 1, 1, 1)
-
-        self.search_data_btn = QPushButton(self.Data_widget)
-        self.search_data_btn.setObjectName(u"search_data_btn")
-        sizePolicy1.setHeightForWidth(self.search_data_btn.sizePolicy().hasHeightForWidth())
-        self.search_data_btn.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_18.addWidget(self.search_data_btn, 1, 2, 1, 1)
-
-        self.label_36 = QLabel(self.Data_widget)
-        self.label_36.setObjectName(u"label_36")
-        sizePolicy1.setHeightForWidth(self.label_36.sizePolicy().hasHeightForWidth())
-        self.label_36.setSizePolicy(sizePolicy1)
-        self.label_36.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
-
-        self.gridLayout_18.addWidget(self.label_36, 2, 1, 1, 1)
-
-        self.label_37 = QLabel(self.Data_widget)
-        self.label_37.setObjectName(u"label_37")
-        sizePolicy1.setHeightForWidth(self.label_37.sizePolicy().hasHeightForWidth())
-        self.label_37.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_18.addWidget(self.label_37, 4, 1, 1, 1)
-
-        self.label_39 = QLabel(self.Data_widget)
-        self.label_39.setObjectName(u"label_39")
-
-        self.gridLayout_18.addWidget(self.label_39, 5, 0, 1, 1)
-
-        self.update_data_btn = QPushButton(self.Data_widget)
-        self.update_data_btn.setObjectName(u"update_data_btn")
-        sizePolicy1.setHeightForWidth(self.update_data_btn.sizePolicy().hasHeightForWidth())
-        self.update_data_btn.setSizePolicy(sizePolicy1)
-        self.update_data_btn.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-
-        self.gridLayout_18.addWidget(self.update_data_btn, 3, 1, 1, 1)
-
-
-        self.gridLayout_8.addLayout(self.gridLayout_18, 5, 2, 1, 1)
-
-        self.gridLayout_14 = QGridLayout()
-        self.gridLayout_14.setObjectName(u"gridLayout_14")
-        self.page_label = QLabel(self.Data_widget)
-        self.page_label.setObjectName(u"page_label")
-        sizePolicy1.setHeightForWidth(self.page_label.sizePolicy().hasHeightForWidth())
-        self.page_label.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_14.addWidget(self.page_label, 0, 3, 1, 1)
-
-        self.pushButton_2 = QPushButton(self.Data_widget)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        sizePolicy1.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
-        self.pushButton_2.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_14.addWidget(self.pushButton_2, 0, 0, 1, 1)
-
-        self.pushButton_4 = QPushButton(self.Data_widget)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        sizePolicy1.setHeightForWidth(self.pushButton_4.sizePolicy().hasHeightForWidth())
-        self.pushButton_4.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_14.addWidget(self.pushButton_4, 0, 4, 1, 1)
-
-        self.pushButton_3 = QPushButton(self.Data_widget)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        sizePolicy1.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
-        self.pushButton_3.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_14.addWidget(self.pushButton_3, 0, 2, 1, 1)
-
-        self.pushButton_5 = QPushButton(self.Data_widget)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        sizePolicy1.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
-        self.pushButton_5.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_14.addWidget(self.pushButton_5, 0, 6, 1, 1)
-
-        self.widget_2 = QWidget(self.Data_widget)
-        self.widget_2.setObjectName(u"widget_2")
-        sizePolicy1.setHeightForWidth(self.widget_2.sizePolicy().hasHeightForWidth())
-        self.widget_2.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_14.addWidget(self.widget_2, 0, 1, 1, 1)
-
-        self.widget_3 = QWidget(self.Data_widget)
-        self.widget_3.setObjectName(u"widget_3")
-        sizePolicy1.setHeightForWidth(self.widget_3.sizePolicy().hasHeightForWidth())
-        self.widget_3.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_14.addWidget(self.widget_3, 0, 5, 1, 1)
-
-
-        self.gridLayout_8.addLayout(self.gridLayout_14, 4, 0, 1, 3)
-
-        self.gridLayout_10 = QGridLayout()
-        self.gridLayout_10.setObjectName(u"gridLayout_10")
-        self.data_table_widget = QTableWidget(self.Data_widget)
-        self.data_table_widget.setObjectName(u"data_table_widget")
-
-        self.gridLayout_10.addWidget(self.data_table_widget, 0, 0, 1, 1)
-
-
-        self.gridLayout_8.addLayout(self.gridLayout_10, 3, 0, 1, 3)
-
-        self.gridLayout_15 = QGridLayout()
-        self.gridLayout_15.setObjectName(u"gridLayout_15")
-        self.label = QLabel(self.Data_widget)
-        self.label.setObjectName(u"label")
-        sizePolicy1.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_15.addWidget(self.label, 0, 0, 1, 1)
-
-
-        self.gridLayout_8.addLayout(self.gridLayout_15, 0, 0, 1, 3)
-
-        self.gridLayout_11 = QGridLayout()
-        self.gridLayout_11.setObjectName(u"gridLayout_11")
-        self.label_4 = QLabel(self.Data_widget)
-        self.label_4.setObjectName(u"label_4")
-
-        self.gridLayout_11.addWidget(self.label_4, 2, 0, 1, 1)
-
-        self.sl_end_time_end = QLineEdit(self.Data_widget)
-        self.sl_end_time_end.setObjectName(u"sl_end_time_end")
-        sizePolicy1.setHeightForWidth(self.sl_end_time_end.sizePolicy().hasHeightForWidth())
-        self.sl_end_time_end.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_11.addWidget(self.sl_end_time_end, 2, 2, 1, 1)
-
-        self.sl_start_time_end = QLineEdit(self.Data_widget)
-        self.sl_start_time_end.setObjectName(u"sl_start_time_end")
-        sizePolicy1.setHeightForWidth(self.sl_start_time_end.sizePolicy().hasHeightForWidth())
-        self.sl_start_time_end.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_11.addWidget(self.sl_start_time_end, 1, 2, 1, 1)
-
-        self.sl_end_time_start = QLineEdit(self.Data_widget)
-        self.sl_end_time_start.setObjectName(u"sl_end_time_start")
-        sizePolicy1.setHeightForWidth(self.sl_end_time_start.sizePolicy().hasHeightForWidth())
-        self.sl_end_time_start.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_11.addWidget(self.sl_end_time_start, 2, 1, 1, 1)
-
-        self.label_2 = QLabel(self.Data_widget)
-        self.label_2.setObjectName(u"label_2")
-        sizePolicy1.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
-        self.label_2.setSizePolicy(sizePolicy1)
-        self.label_2.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
-
-        self.gridLayout_11.addWidget(self.label_2, 0, 0, 1, 1)
-
-        self.label_3 = QLabel(self.Data_widget)
-        self.label_3.setObjectName(u"label_3")
-
-        self.gridLayout_11.addWidget(self.label_3, 1, 0, 1, 1)
-
-        self.sl_start_time_start = QLineEdit(self.Data_widget)
-        self.sl_start_time_start.setObjectName(u"sl_start_time_start")
-        sizePolicy1.setHeightForWidth(self.sl_start_time_start.sizePolicy().hasHeightForWidth())
-        self.sl_start_time_start.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_11.addWidget(self.sl_start_time_start, 1, 1, 1, 1)
-
-        self.search_id_resp = QLineEdit(self.Data_widget)
-        self.search_id_resp.setObjectName(u"search_id_resp")
-        sizePolicy1.setHeightForWidth(self.search_id_resp.sizePolicy().hasHeightForWidth())
-        self.search_id_resp.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_11.addWidget(self.search_id_resp, 0, 1, 1, 1)
-
-        self.label_5 = QLabel(self.Data_widget)
-        self.label_5.setObjectName(u"label_5")
-
-        self.gridLayout_11.addWidget(self.label_5, 3, 0, 1, 1)
-
-        self.sl_total_time_start = QLineEdit(self.Data_widget)
-        self.sl_total_time_start.setObjectName(u"sl_total_time_start")
-        sizePolicy1.setHeightForWidth(self.sl_total_time_start.sizePolicy().hasHeightForWidth())
-        self.sl_total_time_start.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_11.addWidget(self.sl_total_time_start, 3, 1, 1, 1)
-
-        self.sl_total_time_end = QLineEdit(self.Data_widget)
-        self.sl_total_time_end.setObjectName(u"sl_total_time_end")
-        sizePolicy1.setHeightForWidth(self.sl_total_time_end.sizePolicy().hasHeightForWidth())
-        self.sl_total_time_end.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_11.addWidget(self.sl_total_time_end, 3, 2, 1, 1)
-
-
-        self.gridLayout_8.addLayout(self.gridLayout_11, 1, 0, 1, 1)
-
-        self.gridLayout_12 = QGridLayout()
-        self.gridLayout_12.setObjectName(u"gridLayout_12")
-        self.productivity_score = QLineEdit(self.Data_widget)
-        self.productivity_score.setObjectName(u"productivity_score")
-        sizePolicy1.setHeightForWidth(self.productivity_score.sizePolicy().hasHeightForWidth())
-        self.productivity_score.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.productivity_score, 3, 1, 1, 1)
-
-        self.label_32 = QLabel(self.Data_widget)
-        self.label_32.setObjectName(u"label_32")
-        sizePolicy1.setHeightForWidth(self.label_32.sizePolicy().hasHeightForWidth())
-        self.label_32.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.label_32, 4, 0, 1, 1)
-
-        self.label_29 = QLabel(self.Data_widget)
-        self.label_29.setObjectName(u"label_29")
-        sizePolicy1.setHeightForWidth(self.label_29.sizePolicy().hasHeightForWidth())
-        self.label_29.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.label_29, 1, 0, 1, 1)
-
-        self.work_hours = QLineEdit(self.Data_widget)
-        self.work_hours.setObjectName(u"work_hours")
-        sizePolicy1.setHeightForWidth(self.work_hours.sizePolicy().hasHeightForWidth())
-        self.work_hours.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.work_hours, 2, 1, 1, 1)
-
-        self.label_23 = QLabel(self.Data_widget)
-        self.label_23.setObjectName(u"label_23")
-        sizePolicy1.setHeightForWidth(self.label_23.sizePolicy().hasHeightForWidth())
-        self.label_23.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.label_23, 0, 0, 1, 1)
-
-        self.caffeine_intake_mg = QLineEdit(self.Data_widget)
-        self.caffeine_intake_mg.setObjectName(u"caffeine_intake_mg")
-        sizePolicy1.setHeightForWidth(self.caffeine_intake_mg.sizePolicy().hasHeightForWidth())
-        self.caffeine_intake_mg.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.caffeine_intake_mg, 0, 1, 1, 1)
-
-        self.mood_score = QLineEdit(self.Data_widget)
-        self.mood_score.setObjectName(u"mood_score")
-        sizePolicy1.setHeightForWidth(self.mood_score.sizePolicy().hasHeightForWidth())
-        self.mood_score.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.mood_score, 4, 1, 1, 1)
-
-        self.label_30 = QLabel(self.Data_widget)
-        self.label_30.setObjectName(u"label_30")
-        sizePolicy1.setHeightForWidth(self.label_30.sizePolicy().hasHeightForWidth())
-        self.label_30.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.label_30, 2, 0, 1, 1)
-
-        self.screen_time = QLineEdit(self.Data_widget)
-        self.screen_time.setObjectName(u"screen_time")
-        sizePolicy1.setHeightForWidth(self.screen_time.sizePolicy().hasHeightForWidth())
-        self.screen_time.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.screen_time, 1, 1, 1, 1)
-
-        self.label_31 = QLabel(self.Data_widget)
-        self.label_31.setObjectName(u"label_31")
-        sizePolicy1.setHeightForWidth(self.label_31.sizePolicy().hasHeightForWidth())
-        self.label_31.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.label_31, 3, 0, 1, 1)
-
-        self.label_33 = QLabel(self.Data_widget)
-        self.label_33.setObjectName(u"label_33")
-        sizePolicy1.setHeightForWidth(self.label_33.sizePolicy().hasHeightForWidth())
-        self.label_33.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.label_33, 5, 0, 1, 1)
-
-        self.stress_level = QLineEdit(self.Data_widget)
-        self.stress_level.setObjectName(u"stress_level")
-        sizePolicy1.setHeightForWidth(self.stress_level.sizePolicy().hasHeightForWidth())
-        self.stress_level.setSizePolicy(sizePolicy1)
-
-        self.gridLayout_12.addWidget(self.stress_level, 5, 1, 1, 1)
-
-
-        self.gridLayout_8.addLayout(self.gridLayout_12, 5, 1, 1, 1)
-
         self.gridLayout_16 = QGridLayout()
         self.gridLayout_16.setObjectName(u"gridLayout_16")
         self.coffee_end = QLineEdit(self.Data_widget)
@@ -1127,6 +691,286 @@ class Ui_MainWindow(object):
 
 
         self.gridLayout_8.addLayout(self.gridLayout_16, 1, 1, 1, 1)
+
+        self.gridLayout_14 = QGridLayout()
+        self.gridLayout_14.setObjectName(u"gridLayout_14")
+        self.widget_2 = QWidget(self.Data_widget)
+        self.widget_2.setObjectName(u"widget_2")
+        sizePolicy1.setHeightForWidth(self.widget_2.sizePolicy().hasHeightForWidth())
+        self.widget_2.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_14.addWidget(self.widget_2, 0, 0, 1, 1)
+
+        self.widget_3 = QWidget(self.Data_widget)
+        self.widget_3.setObjectName(u"widget_3")
+        sizePolicy1.setHeightForWidth(self.widget_3.sizePolicy().hasHeightForWidth())
+        self.widget_3.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_14.addWidget(self.widget_3, 0, 1, 1, 1)
+
+
+        self.gridLayout_8.addLayout(self.gridLayout_14, 4, 0, 1, 4)
+
+        self.gridLayout_17 = QGridLayout()
+        self.gridLayout_17.setObjectName(u"gridLayout_17")
+        self.mood_start = QLineEdit(self.Data_widget)
+        self.mood_start.setObjectName(u"mood_start")
+        sizePolicy1.setHeightForWidth(self.mood_start.sizePolicy().hasHeightForWidth())
+        self.mood_start.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.mood_start, 2, 1, 1, 1)
+
+        self.work_time_start = QLineEdit(self.Data_widget)
+        self.work_time_start.setObjectName(u"work_time_start")
+        sizePolicy1.setHeightForWidth(self.work_time_start.sizePolicy().hasHeightForWidth())
+        self.work_time_start.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.work_time_start, 0, 1, 1, 1)
+
+        self.stress_end = QLineEdit(self.Data_widget)
+        self.stress_end.setObjectName(u"stress_end")
+        sizePolicy1.setHeightForWidth(self.stress_end.sizePolicy().hasHeightForWidth())
+        self.stress_end.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.stress_end, 3, 2, 1, 1)
+
+        self.label_19 = QLabel(self.Data_widget)
+        self.label_19.setObjectName(u"label_19")
+        sizePolicy1.setHeightForWidth(self.label_19.sizePolicy().hasHeightForWidth())
+        self.label_19.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.label_19, 2, 0, 1, 1)
+
+        self.label_20 = QLabel(self.Data_widget)
+        self.label_20.setObjectName(u"label_20")
+        sizePolicy1.setHeightForWidth(self.label_20.sizePolicy().hasHeightForWidth())
+        self.label_20.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.label_20, 3, 0, 1, 1)
+
+        self.mood_end = QLineEdit(self.Data_widget)
+        self.mood_end.setObjectName(u"mood_end")
+        sizePolicy1.setHeightForWidth(self.mood_end.sizePolicy().hasHeightForWidth())
+        self.mood_end.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.mood_end, 2, 2, 1, 1)
+
+        self.stress_start = QLineEdit(self.Data_widget)
+        self.stress_start.setObjectName(u"stress_start")
+        sizePolicy1.setHeightForWidth(self.stress_start.sizePolicy().hasHeightForWidth())
+        self.stress_start.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.stress_start, 3, 1, 1, 1)
+
+        self.productivity_end = QLineEdit(self.Data_widget)
+        self.productivity_end.setObjectName(u"productivity_end")
+        sizePolicy11 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        sizePolicy11.setHorizontalStretch(0)
+        sizePolicy11.setVerticalStretch(0)
+        sizePolicy11.setHeightForWidth(self.productivity_end.sizePolicy().hasHeightForWidth())
+        self.productivity_end.setSizePolicy(sizePolicy11)
+
+        self.gridLayout_17.addWidget(self.productivity_end, 1, 2, 1, 1)
+
+        self.productivity_start = QLineEdit(self.Data_widget)
+        self.productivity_start.setObjectName(u"productivity_start")
+        sizePolicy1.setHeightForWidth(self.productivity_start.sizePolicy().hasHeightForWidth())
+        self.productivity_start.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.productivity_start, 1, 1, 1, 1)
+
+        self.work_time_end = QLineEdit(self.Data_widget)
+        self.work_time_end.setObjectName(u"work_time_end")
+        sizePolicy1.setHeightForWidth(self.work_time_end.sizePolicy().hasHeightForWidth())
+        self.work_time_end.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.work_time_end, 0, 2, 1, 1)
+
+        self.label_18 = QLabel(self.Data_widget)
+        self.label_18.setObjectName(u"label_18")
+        sizePolicy1.setHeightForWidth(self.label_18.sizePolicy().hasHeightForWidth())
+        self.label_18.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.label_18, 1, 0, 1, 1)
+
+        self.label_17 = QLabel(self.Data_widget)
+        self.label_17.setObjectName(u"label_17")
+        sizePolicy1.setHeightForWidth(self.label_17.sizePolicy().hasHeightForWidth())
+        self.label_17.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_17.addWidget(self.label_17, 0, 0, 1, 1)
+
+
+        self.gridLayout_8.addLayout(self.gridLayout_17, 1, 3, 1, 1)
+
+        self.gridLayout_11 = QGridLayout()
+        self.gridLayout_11.setObjectName(u"gridLayout_11")
+        self.label_4 = QLabel(self.Data_widget)
+        self.label_4.setObjectName(u"label_4")
+
+        self.gridLayout_11.addWidget(self.label_4, 2, 0, 1, 1)
+
+        self.sl_end_time_end = QLineEdit(self.Data_widget)
+        self.sl_end_time_end.setObjectName(u"sl_end_time_end")
+        sizePolicy1.setHeightForWidth(self.sl_end_time_end.sizePolicy().hasHeightForWidth())
+        self.sl_end_time_end.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_11.addWidget(self.sl_end_time_end, 2, 2, 1, 1)
+
+        self.sl_start_time_end = QLineEdit(self.Data_widget)
+        self.sl_start_time_end.setObjectName(u"sl_start_time_end")
+        sizePolicy1.setHeightForWidth(self.sl_start_time_end.sizePolicy().hasHeightForWidth())
+        self.sl_start_time_end.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_11.addWidget(self.sl_start_time_end, 1, 2, 1, 1)
+
+        self.sl_end_time_start = QLineEdit(self.Data_widget)
+        self.sl_end_time_start.setObjectName(u"sl_end_time_start")
+        sizePolicy1.setHeightForWidth(self.sl_end_time_start.sizePolicy().hasHeightForWidth())
+        self.sl_end_time_start.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_11.addWidget(self.sl_end_time_start, 2, 1, 1, 1)
+
+        self.label_2 = QLabel(self.Data_widget)
+        self.label_2.setObjectName(u"label_2")
+        sizePolicy1.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy1)
+        self.label_2.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignTop)
+
+        self.gridLayout_11.addWidget(self.label_2, 0, 0, 1, 1)
+
+        self.label_3 = QLabel(self.Data_widget)
+        self.label_3.setObjectName(u"label_3")
+
+        self.gridLayout_11.addWidget(self.label_3, 1, 0, 1, 1)
+
+        self.sl_start_time_start = QLineEdit(self.Data_widget)
+        self.sl_start_time_start.setObjectName(u"sl_start_time_start")
+        sizePolicy1.setHeightForWidth(self.sl_start_time_start.sizePolicy().hasHeightForWidth())
+        self.sl_start_time_start.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_11.addWidget(self.sl_start_time_start, 1, 1, 1, 1)
+
+        self.search_id_resp = QLineEdit(self.Data_widget)
+        self.search_id_resp.setObjectName(u"search_id_resp")
+        sizePolicy1.setHeightForWidth(self.search_id_resp.sizePolicy().hasHeightForWidth())
+        self.search_id_resp.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_11.addWidget(self.search_id_resp, 0, 1, 1, 1)
+
+        self.label_5 = QLabel(self.Data_widget)
+        self.label_5.setObjectName(u"label_5")
+
+        self.gridLayout_11.addWidget(self.label_5, 3, 0, 1, 1)
+
+        self.sl_total_time_start = QLineEdit(self.Data_widget)
+        self.sl_total_time_start.setObjectName(u"sl_total_time_start")
+        sizePolicy1.setHeightForWidth(self.sl_total_time_start.sizePolicy().hasHeightForWidth())
+        self.sl_total_time_start.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_11.addWidget(self.sl_total_time_start, 3, 1, 1, 1)
+
+        self.sl_total_time_end = QLineEdit(self.Data_widget)
+        self.sl_total_time_end.setObjectName(u"sl_total_time_end")
+        sizePolicy1.setHeightForWidth(self.sl_total_time_end.sizePolicy().hasHeightForWidth())
+        self.sl_total_time_end.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_11.addWidget(self.sl_total_time_end, 3, 2, 1, 1)
+
+
+        self.gridLayout_8.addLayout(self.gridLayout_11, 1, 0, 1, 1)
+
+        self.gridLayout_18 = QGridLayout()
+        self.gridLayout_18.setObjectName(u"gridLayout_18")
+        self.delete_data_id = QLineEdit(self.Data_widget)
+        self.delete_data_id.setObjectName(u"delete_data_id")
+        sizePolicy1.setHeightForWidth(self.delete_data_id.sizePolicy().hasHeightForWidth())
+        self.delete_data_id.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_18.addWidget(self.delete_data_id, 5, 1, 1, 1)
+
+        self.delete_data_btn = QPushButton(self.Data_widget)
+        self.delete_data_btn.setObjectName(u"delete_data_btn")
+        sizePolicy1.setHeightForWidth(self.delete_data_btn.sizePolicy().hasHeightForWidth())
+        self.delete_data_btn.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_18.addWidget(self.delete_data_btn, 6, 1, 1, 1)
+
+        self.update_data_id = QLineEdit(self.Data_widget)
+        self.update_data_id.setObjectName(u"update_data_id")
+        sizePolicy1.setHeightForWidth(self.update_data_id.sizePolicy().hasHeightForWidth())
+        self.update_data_id.setSizePolicy(sizePolicy1)
+        self.update_data_id.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_18.addWidget(self.update_data_id, 1, 1, 1, 1)
+
+        self.label_35 = QLabel(self.Data_widget)
+        self.label_35.setObjectName(u"label_35")
+        sizePolicy1.setHeightForWidth(self.label_35.sizePolicy().hasHeightForWidth())
+        self.label_35.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_18.addWidget(self.label_35, 1, 0, 1, 1)
+
+        self.label_34 = QLabel(self.Data_widget)
+        self.label_34.setObjectName(u"label_34")
+        sizePolicy1.setHeightForWidth(self.label_34.sizePolicy().hasHeightForWidth())
+        self.label_34.setSizePolicy(sizePolicy1)
+        self.label_34.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.label_34.setLocale(QLocale(QLocale.Russian, QLocale.Russia))
+        self.label_34.setLineWidth(-5)
+        self.label_34.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_18.addWidget(self.label_34, 0, 1, 1, 1)
+
+        self.search_data_btn = QPushButton(self.Data_widget)
+        self.search_data_btn.setObjectName(u"search_data_btn")
+        sizePolicy1.setHeightForWidth(self.search_data_btn.sizePolicy().hasHeightForWidth())
+        self.search_data_btn.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_18.addWidget(self.search_data_btn, 1, 2, 1, 1)
+
+        self.label_36 = QLabel(self.Data_widget)
+        self.label_36.setObjectName(u"label_36")
+        sizePolicy1.setHeightForWidth(self.label_36.sizePolicy().hasHeightForWidth())
+        self.label_36.setSizePolicy(sizePolicy1)
+        self.label_36.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+
+        self.gridLayout_18.addWidget(self.label_36, 2, 1, 1, 1)
+
+        self.label_37 = QLabel(self.Data_widget)
+        self.label_37.setObjectName(u"label_37")
+        sizePolicy1.setHeightForWidth(self.label_37.sizePolicy().hasHeightForWidth())
+        self.label_37.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_18.addWidget(self.label_37, 4, 1, 1, 1)
+
+        self.label_39 = QLabel(self.Data_widget)
+        self.label_39.setObjectName(u"label_39")
+
+        self.gridLayout_18.addWidget(self.label_39, 5, 0, 1, 1)
+
+        self.update_data_btn = QPushButton(self.Data_widget)
+        self.update_data_btn.setObjectName(u"update_data_btn")
+        sizePolicy1.setHeightForWidth(self.update_data_btn.sizePolicy().hasHeightForWidth())
+        self.update_data_btn.setSizePolicy(sizePolicy1)
+        self.update_data_btn.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+
+        self.gridLayout_18.addWidget(self.update_data_btn, 3, 1, 1, 1)
+
+
+        self.gridLayout_8.addLayout(self.gridLayout_18, 5, 3, 1, 1)
+
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.label = QLabel(self.Data_widget)
+        self.label.setObjectName(u"label")
+        sizePolicy1.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy1)
+
+        self.horizontalLayout_2.addWidget(self.label)
+
+
+        self.gridLayout_8.addLayout(self.horizontalLayout_2, 0, 0, 1, 4)
 
         self.gridLayout_19 = QGridLayout()
         self.gridLayout_19.setObjectName(u"gridLayout_19")
@@ -1217,6 +1061,147 @@ class Ui_MainWindow(object):
 
         self.gridLayout_8.addLayout(self.gridLayout_19, 5, 0, 1, 1)
 
+        self.gridLayout_12 = QGridLayout()
+        self.gridLayout_12.setObjectName(u"gridLayout_12")
+        self.productivity_score = QLineEdit(self.Data_widget)
+        self.productivity_score.setObjectName(u"productivity_score")
+        sizePolicy1.setHeightForWidth(self.productivity_score.sizePolicy().hasHeightForWidth())
+        self.productivity_score.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.productivity_score, 3, 1, 1, 1)
+
+        self.label_32 = QLabel(self.Data_widget)
+        self.label_32.setObjectName(u"label_32")
+        sizePolicy1.setHeightForWidth(self.label_32.sizePolicy().hasHeightForWidth())
+        self.label_32.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.label_32, 4, 0, 1, 1)
+
+        self.label_29 = QLabel(self.Data_widget)
+        self.label_29.setObjectName(u"label_29")
+        sizePolicy1.setHeightForWidth(self.label_29.sizePolicy().hasHeightForWidth())
+        self.label_29.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.label_29, 1, 0, 1, 1)
+
+        self.work_hours = QLineEdit(self.Data_widget)
+        self.work_hours.setObjectName(u"work_hours")
+        sizePolicy1.setHeightForWidth(self.work_hours.sizePolicy().hasHeightForWidth())
+        self.work_hours.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.work_hours, 2, 1, 1, 1)
+
+        self.label_23 = QLabel(self.Data_widget)
+        self.label_23.setObjectName(u"label_23")
+        sizePolicy1.setHeightForWidth(self.label_23.sizePolicy().hasHeightForWidth())
+        self.label_23.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.label_23, 0, 0, 1, 1)
+
+        self.caffeine_intake_mg = QLineEdit(self.Data_widget)
+        self.caffeine_intake_mg.setObjectName(u"caffeine_intake_mg")
+        sizePolicy1.setHeightForWidth(self.caffeine_intake_mg.sizePolicy().hasHeightForWidth())
+        self.caffeine_intake_mg.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.caffeine_intake_mg, 0, 1, 1, 1)
+
+        self.mood_score = QLineEdit(self.Data_widget)
+        self.mood_score.setObjectName(u"mood_score")
+        sizePolicy1.setHeightForWidth(self.mood_score.sizePolicy().hasHeightForWidth())
+        self.mood_score.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.mood_score, 4, 1, 1, 1)
+
+        self.label_30 = QLabel(self.Data_widget)
+        self.label_30.setObjectName(u"label_30")
+        sizePolicy1.setHeightForWidth(self.label_30.sizePolicy().hasHeightForWidth())
+        self.label_30.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.label_30, 2, 0, 1, 1)
+
+        self.screen_time = QLineEdit(self.Data_widget)
+        self.screen_time.setObjectName(u"screen_time")
+        sizePolicy1.setHeightForWidth(self.screen_time.sizePolicy().hasHeightForWidth())
+        self.screen_time.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.screen_time, 1, 1, 1, 1)
+
+        self.label_31 = QLabel(self.Data_widget)
+        self.label_31.setObjectName(u"label_31")
+        sizePolicy1.setHeightForWidth(self.label_31.sizePolicy().hasHeightForWidth())
+        self.label_31.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.label_31, 3, 0, 1, 1)
+
+        self.label_33 = QLabel(self.Data_widget)
+        self.label_33.setObjectName(u"label_33")
+        sizePolicy1.setHeightForWidth(self.label_33.sizePolicy().hasHeightForWidth())
+        self.label_33.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.label_33, 5, 0, 1, 1)
+
+        self.stress_level = QLineEdit(self.Data_widget)
+        self.stress_level.setObjectName(u"stress_level")
+        sizePolicy1.setHeightForWidth(self.stress_level.sizePolicy().hasHeightForWidth())
+        self.stress_level.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_12.addWidget(self.stress_level, 5, 1, 1, 1)
+
+
+        self.gridLayout_8.addLayout(self.gridLayout_12, 5, 1, 1, 1)
+
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.data_table_widget = QTableWidget(self.Data_widget)
+        self.data_table_widget.setObjectName(u"data_table_widget")
+
+        self.horizontalLayout.addWidget(self.data_table_widget)
+
+
+        self.gridLayout_8.addLayout(self.horizontalLayout, 3, 0, 1, 4)
+
+        self.gridLayout_13 = QGridLayout()
+        self.gridLayout_13.setObjectName(u"gridLayout_13")
+        self.all_data_btn = QPushButton(self.Data_widget)
+        self.all_data_btn.setObjectName(u"all_data_btn")
+
+        self.gridLayout_13.addWidget(self.all_data_btn, 0, 1, 1, 1)
+
+        self.frame = QFrame(self.Data_widget)
+        self.frame.setObjectName(u"frame")
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+
+        self.gridLayout_13.addWidget(self.frame, 0, 0, 1, 1)
+
+        self.widget_4 = QWidget(self.Data_widget)
+        self.widget_4.setObjectName(u"widget_4")
+        self.export_to_excel = QPushButton(self.widget_4)
+        self.export_to_excel.setObjectName(u"export_to_excel")
+        self.export_to_excel.setGeometry(QRect(100, 0, 251, 30))
+        sizePolicy1.setHeightForWidth(self.export_to_excel.sizePolicy().hasHeightForWidth())
+        self.export_to_excel.setSizePolicy(sizePolicy1)
+
+        self.gridLayout_13.addWidget(self.widget_4, 0, 2, 1, 1)
+
+
+        self.gridLayout_8.addLayout(self.gridLayout_13, 2, 0, 1, 4)
+
+        self.gridLayout_21 = QGridLayout()
+        self.gridLayout_21.setObjectName(u"gridLayout_21")
+        self.create_data = QPushButton(self.Data_widget)
+        self.create_data.setObjectName(u"create_data")
+        sizePolicy12 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        sizePolicy12.setHorizontalStretch(0)
+        sizePolicy12.setVerticalStretch(0)
+        sizePolicy12.setHeightForWidth(self.create_data.sizePolicy().hasHeightForWidth())
+        self.create_data.setSizePolicy(sizePolicy12)
+
+        self.gridLayout_21.addWidget(self.create_data, 0, 0, 1, 1)
+
+
+        self.gridLayout_8.addLayout(self.gridLayout_21, 5, 2, 1, 1)
+
         self.tabWidget.addTab(self.Data_widget, "")
 
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
@@ -1272,12 +1257,19 @@ class Ui_MainWindow(object):
         self.search_resp_btn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0438\u0441\u043a \u0440\u0435\u0441\u043f\u043e\u043d\u0434\u0435\u043d\u0442\u043e\u0432", None))
         self.all_respondents_btn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u0432\u0441\u0435\u0445 \u0440\u0435\u0441\u043f\u043e\u043d\u0434\u0435\u043d\u0442\u043e\u0432", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Resp_widget), QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0441\u043f\u043e\u043d\u0434\u0435\u043d\u0442", None))
-        self.label_17.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0430\u0431\u043e\u0447\u0435\u0435 \u0432\u0440\u0435\u043c\u044f", None))
-        self.work_time_end.setText("")
-        self.label_18.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c(1...10)", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"\u041a\u043e\u0444\u0435\u0438\u043d, \u043c\u0433", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u041a\u0430\u0447\u0435\u0441\u0442\u0432\u043e \u0441\u043d\u0430(1...10)", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u0434\u043b\u044f \u0441\u043f\u043e\u0440\u0442\u0430, \u043c\u0438\u043d", None))
+        self.label_16.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u0443 \u044d\u043a\u0440\u0430\u043d\u0430, \u043c\u0438\u043d", None))
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435(1...10)", None))
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0441\u0442\u0440\u0435\u0441\u0441\u0430(1...10)", None))
-        self.all_data_btn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0435", None))
+        self.work_time_end.setText("")
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c(1...10)", None))
+        self.label_17.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0430\u0431\u043e\u0447\u0435\u0435 \u0432\u0440\u0435\u043c\u044f", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u043f\u0440\u043e\u0431\u0443\u0436\u0434\u0435\u043d\u0438\u044f", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"ID \u0440\u0435c\u043f\u043e\u043d\u0434\u0435\u043d\u0442\u0430", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u043e\u0442\u0445\u043e\u0434\u0430 \u043a\u043e \u0441\u043d\u0443", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u0449\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u0441\u043d\u0430", None))
         self.delete_data_btn.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0434\u0430\u043b\u0438\u0442\u044c", None))
         self.label_35.setText(QCoreApplication.translate("MainWindow", u"ID \u0437\u0430\u043f\u0438\u0441\u0438", None))
         self.label_34.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u043f\u0438\u0441\u0438", None))
@@ -1286,32 +1278,22 @@ class Ui_MainWindow(object):
         self.label_37.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u0437\u0430\u043f\u0438\u0441\u0438", None))
         self.label_39.setText(QCoreApplication.translate("MainWindow", u"ID \u0437\u0430\u043f\u0438\u0441\u0438", None))
         self.update_data_btn.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c", None))
-        self.page_label.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430 1", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0441\u0442\u0440\u043e\u0438\u0442\u044c \u0433\u0440\u0430\u0444\u0438\u043a", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043b\u0435\u0434\u0443\u044e\u0449\u0430\u044f", None))
-        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0430\u044f", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u0432 EXCEL", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b \u043f\u043e\u0438\u0441\u043a\u0430", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u043f\u0440\u043e\u0431\u0443\u0436\u0434\u0435\u043d\u0438\u044f", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"ID \u0440\u0435c\u043f\u043e\u043d\u0434\u0435\u043d\u0442\u0430", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u043e\u0442\u0445\u043e\u0434\u0430 \u043a\u043e \u0441\u043d\u0443", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u0449\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u0441\u043d\u0430", None))
-        self.label_32.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435(1...10)", None))
-        self.label_29.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u0443 \u044d\u043a\u0440\u0430\u043d\u0430, \u043c\u0438\u043d", None))
-        self.label_23.setText(QCoreApplication.translate("MainWindow", u"\u041a\u043e\u0444\u0435\u0438\u043d, \u043c\u0433", None))
-        self.label_30.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0430\u0431\u043e\u0447\u0435\u0435 \u0432\u0440\u0435\u043c\u044f", None))
-        self.label_31.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c(1...10)", None))
-        self.label_33.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0441\u0442\u0440\u0435\u0441\u0441\u0430(1...10)", None))
-        self.label_15.setText(QCoreApplication.translate("MainWindow", u"\u041a\u043e\u0444\u0435\u0438\u043d, \u043c\u0433", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u041a\u0430\u0447\u0435\u0441\u0442\u0432\u043e \u0441\u043d\u0430(1...10)", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u0434\u043b\u044f \u0441\u043f\u043e\u0440\u0442\u0430, \u043c\u0438\u043d", None))
-        self.label_16.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u0443 \u044d\u043a\u0440\u0430\u043d\u0430, \u043c\u0438\u043d", None))
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u043e\u0442\u0445\u043e\u0434\u0430 \u043a\u043e \u0441\u043d\u0443", None))
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"\u041a\u0430\u0447\u0435\u0441\u0442\u0432\u043e \u0441\u043d\u0430(1...10)", None))
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"ID \u0440\u0435c\u043f\u043e\u043d\u0434\u0435\u043d\u0442\u0430", None))
         self.label_25.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u043f\u0440\u043e\u0431\u0436\u0434\u0435\u043d\u0438\u044f", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u0449\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u0441\u043d\u0430", None))
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u0434\u043b\u044f \u0441\u043f\u043e\u0440\u0442\u0430, \u043c\u0438\u043d", None))
+        self.label_32.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0435\u043d\u0438\u0435(1...10)", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0440\u0435\u043c\u044f \u0443 \u044d\u043a\u0440\u0430\u043d\u0430, \u043c\u0438\u043d", None))
+        self.label_23.setText(QCoreApplication.translate("MainWindow", u"\u041a\u043e\u0444\u0435\u0438\u043d, \u043c\u0433", None))
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0430\u0431\u043e\u0447\u0435\u0435 \u0432\u0440\u0435\u043c\u044f", None))
+        self.label_31.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c(1...10)", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"\u0423\u0440\u043e\u0432\u0435\u043d\u044c \u0441\u0442\u0440\u0435\u0441\u0441\u0430(1...10)", None))
+        self.all_data_btn.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0435", None))
+        self.export_to_excel.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u0432 EXCEL", None))
+        self.create_data.setText(QCoreApplication.translate("MainWindow", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Data_widget), QCoreApplication.translate("MainWindow", u"\u0414\u0430\u043d\u043d\u044b\u0435", None))
     # retranslateUi
 

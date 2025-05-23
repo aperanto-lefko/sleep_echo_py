@@ -6,3 +6,5 @@ sqlalchemy==1.4.41 # ORM (Object-Relational Mapping) для работы с ба
 alembic==1.15.2 # система миграций для SQLAlchemy (аналог Django Migrations).
 pydantic==1.10.13 #валидация данных и парсинг через аннотации типов
 sqlmodel==0.0.8
+
+openpyxl~=3.1.5

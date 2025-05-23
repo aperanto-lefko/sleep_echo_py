@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from sqlmodel import select
 from typing import List, Optional
 from models.sleep_data import SleepData
-from datetime import date
+
 
 
 class SleepDataRepository:
